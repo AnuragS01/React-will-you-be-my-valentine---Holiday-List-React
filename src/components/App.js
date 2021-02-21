@@ -42,10 +42,10 @@ const App = () => {
       { name: 'Lonavala', country: 'India' }
     ];
     
-    const cities = newCityList.filter(countries => countries.country === "India");
+    // const cities = newCityList.filter(countries => countries.country === "India");
 
-    const newCities = cities.map(newCityList => 
-      <li key={newCityList.name}>{newCityList.name}</li>);
+    // const newCities = cities.map(newCityList => 
+    //   <li key={`${newCityList.index} + 1`}>{newCityList.name}</li>);
 
     return (
       <div id="main">
@@ -53,7 +53,10 @@ const App = () => {
              {/* {cityList.filter(cities => cities.country="India").map(filteredCities => (
                <li>{filteredCities}</li>
              ))} */}
-             {newCities}
+             {/* {newCities} */}
+             <li key="lacation1">Goa</li>
+             <li key="location2">Darjeeling</li>
+             <li key="location3">Lonavala</li>
           </ol>
       </div>
     )
