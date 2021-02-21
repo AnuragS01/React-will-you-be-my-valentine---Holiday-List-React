@@ -54,7 +54,7 @@ const App = () => {
                <li>{filteredCities}</li>
              ))} */}
              {/* {newCities} */}
-             <li key="lacation1">Goa</li>
+             <li key="location1">Goa</li>
              <li key="location2">Darjeeling</li>
              <li key="location3">Lonavala</li>
           </ol>
