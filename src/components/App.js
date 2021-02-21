@@ -33,11 +33,19 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ];
+
+    const newCityList = [
+      { name: 'Goa', country: 'India' }, { name: 'Amsterdam', country: 'Netherlands' },
+      { name: 'New York', country: 'USA' },
+      { name: 'Darjeeling', country: 'India' },
+      { name: 'Tokyo', country: 'Japan' },
+      { name: 'Lonavala', country: 'India' }
+    ];
     
-    const cities = cityList.filter(countries => countries.country === "India");
+    const cities = newCityList.filter(countries => countries.country === "India");
 
     const newCities = cities.map(newCityList => 
-      <li key="`Location${newCities.indexOf + 1}`">{newCityList.name}</li>);
+      <li key={newCityList.name}>{newCityList.name}</li>);
 
     return (
       <div id="main">
