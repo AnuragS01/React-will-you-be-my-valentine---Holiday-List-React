@@ -1,12 +1,10 @@
 
-import React, { Component, useState } from "react";
+import React from "react";
 import '../styles/App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+const App = () => {
 
-    this.cityList = [{ name: 'Goa', country: 'India' },
+    const cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
     { name: 'Darjeeling', country: 'India' },
@@ -35,15 +33,22 @@ class App extends Component {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
-  }
+    
+    const cities = cityList.filter(countries => countries.country === "India");
 
-  render() {
+    const newCities = cities.map(newCityList => 
+      <li key={newCityList.name}>{newCityList.name}</li>);
+
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+          <ol>
+             {/* {cityList.filter(cities => cities.country="India").map(filteredCities => (
+               <li>{filteredCities}</li>
+             ))} */}
+             {newCities}
+          </ol>
       </div>
     )
-  }
 }
 
 
